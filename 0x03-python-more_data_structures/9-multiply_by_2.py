@@ -7,7 +7,7 @@ def multiply_by_2(a_dictionary):
         'Mike': 14,
         'Molly': 16,
     }
-    new_dict = 1
-    for i in d:
-        new_dict = new_dict * 2[i]
+    new_dict = []
+    for k in a_dictionary:
+        new_dict[k] = a_dictionary * 2[k]
     return new_dict
