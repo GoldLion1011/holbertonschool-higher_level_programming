@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
               "M": 1000
         }
         for i in range(length):
-            if i + 1 < length nums[romstr[i]] < nums[romstr[i + 1]]:
+            if i + 1 < length and nums[romstr[i]] < nums[romstr[i + 1]]:
                 num -= nums[romstr[i]]
             else:
                 num += nums[romstr[i]]
