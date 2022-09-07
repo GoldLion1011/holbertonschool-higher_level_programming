@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Info pertaining to square classes"""
 
 class Square:
     """Creates an empty square"""
