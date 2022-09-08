@@ -29,9 +29,9 @@ class Square:
 
     def my_print(self):
         """Prints the square"""
-        if self.__size == 0:
-            print()
-            return
-        for i in range(self.__size):
-            print(self.__size * "#", end="")
-            print()
+        for i in range(0, self.__size):
+            if i > 0:
+                print()
+            for j in range(0, self.__size):
+                print("#", end="")
+        print()
