@@ -59,6 +59,12 @@ div cannot be == 0:
     ...
     ZeroDivisionError: division by zero
 
+div is None:
+
+    >>> matrix_divided(1, None)
+    Traceback (most recent call last):
+    TypeError: 'NoneType' object is not subscriptable
+    
 div is negative:
     >>> matrix = [
     ...    [1, 2, 3],
@@ -76,8 +82,6 @@ Matrix is empty:
 
 div is not a number:
     >>> matrix_divided(matrix, 'yikes')
-    >>> matrix_divided(matrix, None)
-    ...
     Traceback (most recent call last):
     ...
     TypeError: div must be a number
