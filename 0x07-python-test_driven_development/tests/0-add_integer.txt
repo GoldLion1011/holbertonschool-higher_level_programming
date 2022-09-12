@@ -42,13 +42,11 @@ a is neither int nor float:
 
     >>> add_integer("I am not a number", 1)
     Traceback (most recent call last):
-    ...
     TypeError: a must be an integer
 
 b is neither int nor float:
 
     >>> add_integer(5, "I am not a number")
-    ...
     Traceback (most recent call last):
     TypeError: b must be an integer
 
@@ -56,12 +54,52 @@ String passed only:
 
     >>> add_integer("No numbers here")
     Traceback (most recent call last):
-    ...
     TypeError: a must be an integer
+
+Too many arguments:
+
+    >>> add_integer(1, 2, 3)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
       
 No arguments passed:
 
     >>> add_integer()
     Traceback (most recent call last):
-    ...
     TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Infinity passed:
+
+    >>> add_integer(float('inf'), 3)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+Super-long float passed:
+
+    >>> add_integer(1, 4.783793409349352738397738402049)
+    5
+
+Complex number passed:
+
+    >>> add_integer(7j, 6)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
