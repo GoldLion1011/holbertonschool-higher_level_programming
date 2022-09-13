@@ -1,5 +1,4 @@
-s
-n - More Classes and Objects
+# 0x06. Python - More Classes and Objects
 ## Tasks
 
 ### 0. Real definition of a rectangle
