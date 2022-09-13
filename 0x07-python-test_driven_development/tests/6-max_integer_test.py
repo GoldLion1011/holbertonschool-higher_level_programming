@@ -5,7 +5,7 @@ import unittest
 max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
-    def max_integer(list=[]):
+    def test_max_integer(unittest.TestCase):
         self.assertEqual(max_integer("string"), 't')
         self.assertEqual(max_integer([], None)
         self.assertEqual(max_integer([4], 4)
