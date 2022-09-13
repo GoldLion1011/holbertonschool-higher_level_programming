@@ -21,6 +21,8 @@ Correct usage:
     Under the sea?
     <BLANKLINE>
 
+QA case:
+
     >>> text_indentation("Who lives in a pineapple: Under the sea? SpongeBob Squarepants.")
     Who lives in a pineapple:
     <BLANKLINE>
@@ -29,8 +31,12 @@ Correct usage:
     SpongeBob Squarepants.
     <BLANKLINE>
 
+Other delims in string:
+
     >>> text_indentation("Absorbant, and yellow; and porous is he!")
     Absorbant, and yellow; and porous is he!
+
+All delims in string:
 
     >>> text_indentation(".  : ?")
     .
@@ -40,13 +46,18 @@ Correct usage:
     ?
     <BLANKLINE>
 
+No delims in string:
+
     >>> text_indentation("Bikini Bottom")
     Bikini Bottom
 
+Text is not a string:
 
     >>> text_indentation(1)
     Traceback  (most recent call last):
     TypeError: text must be a string
+
+New line in string:
 
     >>> text_indentation("Mr.\n Krabs?")
     Mr.
@@ -54,7 +65,26 @@ Correct usage:
     Krabs?
     <BLANKLINE>
 
+Multiple spaces in string:
+
+    >>> text_indentation("Krusty:   Krab.")
+
+    Krusty:
+    <BLANKLINE>
+    Krab.
+    <BLANKLINE>
+
+Empty string passed:
+
     >>> text_indentation("")
+
+Too many args passed:
+
+    >>> text_indentation("Patrick", "Squidward")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+No string given:
 
     >>> text_indentation(None)
     Traceback  (most recent call last):
