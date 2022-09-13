@@ -6,7 +6,6 @@ Defines a rectangle class... maybe
 
 class Rectangle:
     """ Class that defines a rectangle """
-
     def __init__(self, width=0, height=0):
         """ Initializes a new rectangle.
 
@@ -14,8 +13,8 @@ class Rectangle:
                   width (int): width of new rectangle
                   height (int): height of new rectangle
         """
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
@@ -47,6 +46,6 @@ class Rectangle:
         return self.__height * self.__width
 
     def perimeter(self):
-        if self.__height * self.__width = 0:
+        if self.__height * self.__width == 0:
             return 0
         return (self.__height + self.__width) * 2
