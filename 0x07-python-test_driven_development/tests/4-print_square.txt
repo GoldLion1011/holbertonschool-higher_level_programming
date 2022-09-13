@@ -47,3 +47,9 @@ size is empty:
     >>> print_square(None)
     Traceback (most recent call last):
     print_square() missing 1 required positional argument: 'size'
+
+Too many args given:
+
+    >>> print_square(4, 4)
+    Traceback (most recent call last):
+    TypeError: print_square() takes 1 positional argument but 2 were given
