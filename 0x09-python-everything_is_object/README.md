@@ -190,7 +190,7 @@ a = (1, 2)
 ```
 
 Is  `a`  a tuple? Answer with  `Yes`  or  `No`.
-### . Tuple or not?
+### 22. Tuple or not?
 
 ```
 a = (1)
