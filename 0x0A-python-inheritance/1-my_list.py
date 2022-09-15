@@ -6,9 +6,9 @@
 class MyList(list):
     """ class MyList inherits from list """
 
+    def __init__(self):
+        super().__init__()
+
     def print_sorted(self):
         """ Prints a list in ascending order """
-
-        new_list = self[:]
-        new_list.sort()
-        print("{}".format(new_list))
+        print(sorted(self))
