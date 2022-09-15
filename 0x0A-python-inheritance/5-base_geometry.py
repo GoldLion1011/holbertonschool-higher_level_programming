@@ -3,7 +3,6 @@
     Create empty class BaseGeometry"""
 
 
-class BaseGeometry
-""" empty class """
-
-pass
+class BaseGeometry():
+    """ empty class """
+    pass
