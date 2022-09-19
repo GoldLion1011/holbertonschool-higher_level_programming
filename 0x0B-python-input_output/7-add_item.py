@@ -19,4 +19,4 @@ except(TypeError, FileNotFoundError):
 for i in sys.argv[1:]:
     my_file.append(i)
 
-save(my_list, 'add_item.json)
+save(my_list, 'add_item.json')
