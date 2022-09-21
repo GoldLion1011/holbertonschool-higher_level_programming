@@ -99,4 +99,4 @@ class Rectangle(Base):
 
         return (f'[Rectangle] ({self.id})'
                 f'{self.__x}/{self.__y} - '
-                f'{self.width}/{self.__height}')
+                f'{self.__width}/{self.__height}')
