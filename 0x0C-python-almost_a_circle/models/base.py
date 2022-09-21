@@ -43,3 +43,11 @@ class Base:
 
         with open(cls.__name__+".json", 'w', encoding='utf-8') as f:
             f.write(cls.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ """
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
