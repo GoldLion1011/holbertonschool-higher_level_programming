@@ -12,11 +12,11 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """ initializes a Rectangle instance """
 
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
@@ -68,8 +68,8 @@ class Rectangle(Base):
 
         if type(value) is not int:
             raise TypeError('x must be an integer')
-        if value <= 0:
-            raise ValueError('x must be > 0')
+        if value < 0:
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @y.setter
@@ -78,8 +78,8 @@ class Rectangle(Base):
 
         if type(value) is not int:
             raise TypeError('y must be an integer')
-        if value <= 0:
-            raise ValueError('y must be > 0')
+        if value < 0:
+            raise ValueError('y must be >= 0')
         self.__y = value
 
     def area(self):
