@@ -69,7 +69,7 @@ class Base:
 
         filename = cls.__name__ + '.json'
         try:
-            with open(filename, 'r', 'utf-8') as f:
+            with open(filename, 'r', encoding='utf-8') as f:
                 json_string = f.read()
                 dict_list = []
             for obj in cls.from_json_string(json_string):
