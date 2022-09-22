@@ -12,6 +12,21 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     """ Test class for Base """
 
+    def test__init__(self):
+        """ test initialization of Base class """
+        self.assertEqual(self.b1.id, 1)
+
+        self.b2 = Base(2)
+        self.assertEqual(self.b2, 2)
+
+        self.b3 = Base()
+        self.assertEqual(self.b3, 2)
+
+        self.assertEqual(self.b2.id, self.b3.id)
+
+        self.b4 = Base('i am not an integer')
+        self.assertEqual(self.b4.id, 'i am not an integer')
+        
     def test_is_int(self):
         """ creates new instances, checks if id is an integer """
         b0 = Base()
@@ -36,6 +51,26 @@ class TestBase(unittest.TestCase):
         b6 = Base()
         self.assertEqual(type(b6), Base)
         self.assertTrue(b6, Base)
+
+    def test_to_json_string(self):
+        """ """
+        pass
+
+    def test_save_to_file(self):
+        """ """
+        pass
+
+    def test_from_json_string(self):
+        """ """
+        pass
+
+    def test_create(self):
+        """ """
+        pass
+
+    def test_load_from_file(self):
+        """ """
+        pass
 
 if __name__ == '__main__':
     unittest.main()
