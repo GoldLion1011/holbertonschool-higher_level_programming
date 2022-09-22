@@ -3,9 +3,7 @@
     Test cases for Rectangle class """
 
 
-from logging import exception
 import unittest
-from unittest.case import _AssertRaisesContext
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
@@ -46,10 +44,12 @@ class TestRectangle(unittest.TestCase):
     def test_rect_args(self):
         """ checks Rectangle for missing arguments """
         r1 = Rectangle(3)
-        self.assertEqual("__init__() missing 1 required positional argument:
-                         'height'", str()x.exception))
-        s = ("__init__() missing 2 required positional arguments: 'width' and 'height'")
-        with self._assertRaises(TypeError) as x:
+        self.assertEqual(
+            "__init__() missing 1 required positional argument:'height'", str(
+                x.exception))
+        s = ("__init__() missing 2 required positional" +
+             " arguments: 'width' and 'height'")
+        with self.assertRaises(TypeError) as x:
             r2 = Rectangle
         self.assertEqual(s, str(x.exception))
 
@@ -59,6 +59,6 @@ class TestRectangle(unittest.TestCase):
         self.assertTrue(isinstance(r1, Base))
         self.assertTrue(issubclass(Rectangle, Base))
         self.assertFalse(isinstance(Rectangle, Base))
-        
+
 if __name__ == '__main__':
     unittest.main()
