@@ -11,28 +11,18 @@ from models.square import Square
 
 class TestRectangle(unittest.TestCase):
     """ Test class for Rectangle """
-    def test_is_rect(self):
-        """ creates new instances, checks that id is an integer"""
-        r1 = Rectangle(1, 2)
-        self.assertEqual(r1.id, 1)
-        r2 = Rectangle(3, 4)
-        self.assertEqual(r2.id, 2)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def test_docstrings(self):
+        """ check module and func documentation"""
+        self.assertTrue(len(Rectangle.__init__.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.width.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.height.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.x.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.y.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.area.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.display.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.__str__.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.update.__doc__) >= 1)
+        self.assertTrue(len(Rectangle.to_dictionary.__doc__) >= 1)
 
 if __name__ == '__main__':
-    unittest.main()    
+    unittest.main()
