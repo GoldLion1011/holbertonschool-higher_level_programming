@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Unittest Base
-    Test cases for Base class,
-    ordered by test_task_testnumber """
+    Test cases for Base class """
 
 
 import unittest
@@ -29,6 +28,14 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b5.id, -1)
         b6 = Base(6)
         self.assertEqual(b6.id, 6)
+        b7 = Base(None)
+        self.assertEqual(b7.id, 3)
 
-        if __name__ == '__main__':
-            unittest.main()
+    def test_is_type(self):
+        """ tests for type and instance """
+        b6 = Base()
+        self.assertEqual(type(b6), Base)
+        self.assertTrue(b6, Base)
+
+if __name__ == '__main__':
+    unittest.main()
