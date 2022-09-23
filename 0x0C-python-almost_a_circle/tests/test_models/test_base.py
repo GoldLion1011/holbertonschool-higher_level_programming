@@ -34,6 +34,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(b6.id, 6)
         b7 = Base(None)
         self.assertEqual(b7.id, 3)
+        self.assertRaises(TypeError, Base, "3")
 
     def test_is_type(self):
         """ tests for type and instance """
