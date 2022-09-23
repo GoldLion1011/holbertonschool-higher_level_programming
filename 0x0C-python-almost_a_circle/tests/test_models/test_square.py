@@ -8,6 +8,8 @@ import json
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestSquare(unittest.TestCase):
@@ -31,7 +33,7 @@ class TestSquare(unittest.TestCase):
 
     def test_to_dictionary(self):
         """ checks dictionary representation and type """
-        s1 = Square(10, 2, 1)
+        s1 = Square(10, 2, 1, 6)
         s1_dictionary = s1.to_dictionary()
         test_dict = {'id': 6, 'size': 10, 'x': 2, 'y': 1}
         self.assertEqual(s1_dictionary, test_dict)

@@ -8,6 +8,8 @@ import json
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+from io import StringIO
+from unittest.mock import patch
 
 
 class TestRectangle(unittest.TestCase):
@@ -47,8 +49,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.area(), 6)
 
     def test_display(self):
-        """ """
-        pass
+        """ checks for display # """
+        r1 = Rectangle(3, 2, 0, 0, 99)
+        with patch('sys.stdout', new=StringIO()) as fake_out:
+            r1.display()
+            output = '###\n###\n'
+            self.assertEqual(fake_out.getvalue(), output)
 
     def test__str__(self):
         """ checks for str return """
