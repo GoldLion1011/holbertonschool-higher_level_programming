@@ -2,7 +2,6 @@
 """ Module Square
     creates a class Square which inherits from Rectangle"""
 
-
 from models.rectangle import Rectangle
 
 

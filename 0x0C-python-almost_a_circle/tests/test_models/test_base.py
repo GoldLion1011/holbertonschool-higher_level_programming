@@ -12,6 +12,18 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     """ Test class for Base """
 
+    def test_docstring(self):
+        """ checks module and function docstrings """
+        modDocstring = __import__('models').base.__doc__
+        self.assertIsNotNone(modDocstring)
+        self.assertIsNotNone(Base.__doc__)
+        self.assertIsNotNone(Base.__init__.__doc__)
+        self.assertIsNotNone(Base.to_json_string.__doc__)
+        self.assertIsNotNone(Base.from_json_string.__doc__)
+        self.assertIsNotNone(Base.save_to_file.__doc__)
+        self.assertIsNotNone(Base.load_from_file.__doc__)
+        self.assertIsNotNone(Base.create.__doc__)
+
     def test__init__(self):
         """ test initialization of Base class """
         pass
