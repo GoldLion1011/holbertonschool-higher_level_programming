@@ -14,6 +14,18 @@ from unittest.mock import patch
 
 class TestSquare(unittest.TestCase):
     """ Test class for Square """
+    def test_docstring(self):
+        """ checks module and function docstrings """
+        modDocstring = __import__('models').square.__doc__
+        self.assertIsNotNone(modDocstring)
+        self.assertIsNotNone(Square.__doc__)
+        self.assertIsNotNone(Square.__init__.__doc__)
+        self.assertIsNotNone(Square.area.__doc__)
+        self.assertIsNotNone(Square.display.__doc__)
+        self.assertIsNotNone(Square.__str__.__doc__)
+        self.assertIsNotNone(Square.update.__doc__)
+        self.assertIsNotNone(Square.to_dictionary.__doc__)
+
     def test_square_init(self):
         """ checks for type """
         with self.assertRaises(ValueError):

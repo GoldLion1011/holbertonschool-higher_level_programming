@@ -14,6 +14,18 @@ from unittest.mock import patch
 
 class TestRectangle(unittest.TestCase):
     """ Test class for Rectangle """
+    def test_docstring(self):
+        """ checks module and function docstrings """
+        modDocstring = __import__('models').rectangle.__doc__
+        self.assertIsNotNone(modDocstring)
+        self.assertIsNotNone(Rectangle.__doc__)
+        self.assertIsNotNone(Rectangle.__init__.__doc__)
+        self.assertIsNotNone(Rectangle.area.__doc__)
+        self.assertIsNotNone(Rectangle.display.__doc__)
+        self.assertIsNotNone(Rectangle.__str__.__doc__)
+        self.assertIsNotNone(Rectangle.update.__doc__)
+        self.assertIsNotNone(Rectangle.to_dictionary.__doc__)
+
     def test_rect_init(self):
         """ checks for type """
         with self.assertRaises(ValueError):
