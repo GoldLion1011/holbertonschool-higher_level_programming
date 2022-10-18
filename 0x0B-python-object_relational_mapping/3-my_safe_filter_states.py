@@ -15,7 +15,12 @@ if __name__ == "__main__":
     cur.execute("SELECT * FROM states WHERE name=%s\
                 ORDER BY states.id ASC", (sys.argv[4]))
     rows = cur.fetchall()
+
+    if rows is None:
+        return False
+
     for row in rows:
         print(row)
+
     cur.close()
     db.close()
