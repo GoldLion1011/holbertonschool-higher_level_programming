@@ -13,16 +13,11 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    state = sys.argv[4
-    ]
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
-                %(name)s ORDER BY states.id", {'name : state'})
-    rows = cur.fetchall()
+    cur.execute("SELECT * FROM states WHERE BINARY name = %(states)s\
+                ORDER BY states.id", {'state': sys.argv[4]})
+    results = cur.fetchall()
 
-    if rows is None:
-        return False
-
-    for row in rows:
+    for row in results:
         print(row)
 
     cur.close()
