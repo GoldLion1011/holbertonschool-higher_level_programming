@@ -12,8 +12,11 @@ if __name__ == "__main__":
                          password=sys.argv[2], db=sys.argv[3])
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name=%s\
-                ORDER BY states.id ASC", (sys.argv[4]))
+
+    state = sys.argv[4
+    ]
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
+                %(name)s ORDER BY states.id", {'name : state'})
     rows = cur.fetchall()
 
     if rows is None:
