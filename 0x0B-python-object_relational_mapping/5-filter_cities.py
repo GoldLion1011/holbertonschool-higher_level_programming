@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     cur.execute("SELECT cities.name FROM cities JOIN\
                 states ON cities.state_id = states.id WHERE states.name\
-                LIKE BINARY %(name)s GROUP BY cities.name", {'name': sys.argv[4]})
+                LIKE BINARY %(name)s GROUP BY cities.name", {'name': argv[4]})
 
     results = cur.fetchall()
 
