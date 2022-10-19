@@ -12,14 +12,14 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT cities.name FROM cities JOIN\
-                states ON cities.state_id = states.id WHERE states.name\
+    cur.execute("SELECT cities.name FROM cities JOIN \
+                states ON cities.state_id = states.id WHERE states.name \
                 LIKE BINARY %(name)s GROUP BY cities.name", {'name': argv[4]})
 
     results = cur.fetchall()
 
     if results is not None:
-        print(", ".join([results[0] for results in results]))
+        print(", ".join([record[0] for record in results]))
 
     cur.close()
     db.close()
