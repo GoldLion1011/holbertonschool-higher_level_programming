@@ -3,7 +3,7 @@
 
 import sqlalchemy
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declaritive import declaritive_base
+from sqlalchemy.ext.declaritive import declarative_base
 
 Base = declarative_base()
 
