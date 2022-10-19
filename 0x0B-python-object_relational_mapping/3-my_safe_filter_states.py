@@ -13,8 +13,9 @@ if __name__ == "__main__":
 
     cur = db.cursor()
 
-    cur.execute("SELECT * FROM states WHERE BINARY name = %(states)s\
-                ORDER BY states.id", {'state': sys.argv[4]})
+    cur.execute("SELECT * FROM states WHERE BINARY name = %(states)s \
+                ORDER BY id;", {'state': sys.argv[4]})
+    
     results = cur.fetchall()
 
     for row in results:
