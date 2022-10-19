@@ -11,8 +11,9 @@ if __name__ == "__main__":
                            (sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
+    
     Session = sessionmaker(bind=engine)
     sesh = Session()
 
-    for id, name in sesh.query(State.id, State.name):
-        print("{}:{}".format(id, name))
+    for state in sesh.query(State).order_by(State.id):
+        print(f'{state.id}: {state.name}')
