@@ -11,11 +11,11 @@ if __name__ == "__main__":
                            (sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
+    
     Session = sessionmaker(bind=engine)
     sesh = Session()
-
-    state = sesh.query(State).first()
-    if state is None:
+    first_state = sesh.query(State.id, State.name).order_by(State.id).first()
+    if first_state is None:
         print("Nothing")
     else:
         print(f'{state.id}: {state.name}')
