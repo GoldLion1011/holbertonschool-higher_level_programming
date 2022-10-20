@@ -2,7 +2,7 @@
 """ Class definition of Base """
 
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declaritive import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
