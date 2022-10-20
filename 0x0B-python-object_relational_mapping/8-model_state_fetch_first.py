@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     sesh = Session()
     first_state = sesh.query(State).first()
-    if first_state is None:
-        print("Nothing")
+    if first_state:
+        print(f'{first_state.id}: {first_state.name}')
     else:
-        print(f'{state.id}: {state.name}')
+        print("Nothing")
