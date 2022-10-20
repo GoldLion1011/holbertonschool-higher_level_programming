@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Lists all states in the states table that contain the letter 'a' """
+""" Prints the State object with name passed as arg from hbtn_0e_6_usa db """
 
 import sys
 from model_state import Base, State
