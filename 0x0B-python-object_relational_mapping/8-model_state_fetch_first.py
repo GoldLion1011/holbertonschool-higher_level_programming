@@ -14,7 +14,7 @@ if __name__ == "__main__":
     
     Session = sessionmaker(bind=engine)
     sesh = Session()
-    first_state = sesh.query(State.id, State.name).order_by(State.id).first()
+    first_state = sesh.query(State).first()
     if first_state is None:
         print("Nothing")
     else:
