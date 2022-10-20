@@ -15,5 +15,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     sesh = Session()
 
-    for state in sesh.query(State).order_by(State.id):
-        print(f'{state.id}: {state.name}')
+    for id, name in sesh.query(State.id, State.name):
+        print(f'{id}: {name}')
