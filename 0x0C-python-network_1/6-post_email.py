@@ -8,6 +8,6 @@ import sys
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    val = {'email': sys.argv[2]}
-    req = requests.post(url, val)
+    value = {'email': sys.argv[2]}
+    req = requests.post(url, value)
     print(req.text)
