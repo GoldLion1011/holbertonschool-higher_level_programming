@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """ Fetches the address https://intranet.hbtn.io/status """
-from urlib import request
+import urllib.request
 
 
 if __name__ == "__main__":
-    request = request.Request('https://intranet.hbtn.io/status')
-    with request.urlopen(request) as page:
-        page = page.read()
+    req = urllib.request.Request('https://intranet.hbtn.io/status')
+    with urllib.request.urlopen(req) as response:
+        page = response.read()
         print('Body response:')
         print('\t- type: {}'.format(type(page)))
         print('\t- content: {}'.format(page))
