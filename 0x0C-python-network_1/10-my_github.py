@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" """
+""" Script that uses GitHub API to display id """
 import requests
 import sys
 from requests.auth import HTTPBasicAuth
