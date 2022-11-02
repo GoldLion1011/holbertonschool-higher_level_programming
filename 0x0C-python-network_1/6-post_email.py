@@ -7,7 +7,4 @@ import sys
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    value = {'email': sys.argv[2]}
-    req = req.post(url, data=value)
-    print(req.text)
+    print(requests.post(sys.argv[1], data={'email': sys.argv[2]}).text)
