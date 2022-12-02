@@ -2,9 +2,6 @@
 
 This was the first JavaScript project I completed at Holberton. Tasks involved writing various introductory-level JavaScript scripts on Node.js.
 
-## [](https://github.com/bdbaraban/holbertonschool-higher_level_programming#tests-heavy_check_mark)Tests  ✔️
-
--   [tests](https://github.com/bdbaraban/holbertonschool-higher_level_programming/blob/master/0x12-javascript-warm_up/tests): Folder of test files. Provided by Holberton School.
 
 ## [](https://github.com/bdbaraban/holbertonschool-higher_level_programming#function-prototypes-floppy_disk)Function Prototypes  💾
 
