@@ -10,7 +10,7 @@ request(url, (err, response, body) => {
     const chars = data[title].characters;
     for (const person in chars) {
       if (chars[person].includes('/18')) {
-        count ++;
+        count++;
       }
     }
   }
