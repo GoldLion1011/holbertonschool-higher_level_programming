@@ -1,10 +1,8 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-const content = 'Python is cool!';
-
 try {
-  fs.writeFileSync(process.argv[2], content);
+  fs.writeFileSync(process.argv[2], process.argv[3], 'utf8');
 } catch (err) {
   console.error(err);
 }
